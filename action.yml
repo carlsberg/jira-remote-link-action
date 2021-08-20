@@ -1,0 +1,19 @@
+name: Jira Remote Link
+description: Creates remote links on Jira from GitHub issues
+
+inputs:
+  jira-url:
+    description: URL for Jira instance (i.e. `example.atlassian.net`)
+    required: true
+
+  jira-email:
+    description: Email for Jira account (i.e. `john.doe@example.com`)
+    required: true
+
+  jira-token:
+    description: Token for Jira account
+    required: true
+
+runs:
+  using: node12
+  main: dist/index.js
