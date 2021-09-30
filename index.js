@@ -3,7 +3,7 @@ const github = require("@actions/github");
 const fetch = require("node-fetch");
 
 const APP_NAME = "GitHub";
-const APP_SOURCE = "jira-remote-link-action";
+const APP_SOURCE = "carlsberg-jira-remote-link-action";
 
 const JIRA_URL = core.getInput("jira-url", { required: true });
 const JIRA_EMAIL = core.getInput("jira-email", { required: true });
