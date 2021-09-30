@@ -11,13 +11,13 @@ const JIRA_TOKEN = core.getInput("jira-token", { required: true });
 const JIRA_AUTH = Buffer.from(`${JIRA_EMAIL}:${JIRA_TOKEN}`).toString("base64");
 
 const ICON_OPENED =
-  "https://raw.githubusercontent.com/crqra/jira-remote-link-action/main/assets/opened.png";
+  "https://raw.githubusercontent.com/carlsberg/jira-remote-link-action/main/assets/opened.png";
 
 const ICON_CLOSED =
-  "https://raw.githubusercontent.com/crqra/jira-remote-link-action/main/assets/closed.png";
+  "https://raw.githubusercontent.com/carlsberg/jira-remote-link-action/main/assets/closed.png";
 
 const ICON_REOPENED =
-  "https://raw.githubusercontent.com/crqra/jira-remote-link-action/main/assets/reopened.png";
+  "https://raw.githubusercontent.com/carlsberg/jira-remote-link-action/main/assets/reopened.png";
 
 main();
 
