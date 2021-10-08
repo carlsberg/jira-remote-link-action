@@ -3,7 +3,7 @@ const github = require("@actions/github");
 const fetch = require("node-fetch");
 
 const APP_NAME = "GitHub";
-const APP_SOURCE = "carlsberg-jira-remote-link-action";
+const APP_SOURCE = "jira-remote-link-action";
 
 const JIRA_URL = core.getInput("jira-url", { required: true });
 const JIRA_EMAIL = core.getInput("jira-email", { required: true });
@@ -11,13 +11,13 @@ const JIRA_TOKEN = core.getInput("jira-token", { required: true });
 const JIRA_AUTH = Buffer.from(`${JIRA_EMAIL}:${JIRA_TOKEN}`).toString("base64");
 
 const ICON_OPENED =
-  "https://raw.githubusercontent.com/carlsberg/jira-remote-link-action/main/assets/opened.png";
+  "https://raw.githubusercontent.com/carlsberg/jira-remote-link-action/main/assets/opened.png?raw=true";
 
 const ICON_CLOSED =
-  "https://raw.githubusercontent.com/carlsberg/jira-remote-link-action/main/assets/closed.png";
+  "https://raw.githubusercontent.com/carlsberg/jira-remote-link-action/main/assets/closed.png?raw=true";
 
 const ICON_REOPENED =
-  "https://raw.githubusercontent.com/carlsberg/jira-remote-link-action/main/assets/reopened.png";
+  "https://raw.githubusercontent.com/carlsberg/jira-remote-link-action/main/assets/reopened.png?raw=true";
 
 main();
 
