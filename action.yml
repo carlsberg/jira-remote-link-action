@@ -1,6 +1,10 @@
 name: Jira Remote Link
 description: Creates remote links on Jira from GitHub issues
 
+branding:
+  icon: link
+  color: green
+
 inputs:
   jira-url:
     description: URL for Jira instance (i.e. `example.atlassian.net`)
