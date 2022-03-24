@@ -119,14 +119,18 @@ function buildTitle() {
 function findJiraKeys() {
   const keys = [];
   const pattern = new RegExp(/([A-Z]+-[0-9]+)/g);
+  const issueOrPullPayload =
+    github.context.payload.issue || github.context.payload.pull_request;
 
-  const titleMatches = github.context.payload.issue.title.match(pattern);
+  const titleMatches =
+    issueOrPullPayload.title && issueOrPullPayload.title.match(pattern);
 
   if (titleMatches) {
     titleMatches.map((k) => keys.push(k));
   }
 
-  const bodyMatches = github.context.payload.issue.body.match(pattern);
+  const bodyMatches =
+    issueOrPullPayload.body && issueOrPullPayload.body.match(pattern);
 
   if (bodyMatches) {
     bodyMatches.map((k) => keys.push(k));
