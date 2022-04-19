@@ -954,7 +954,7 @@ class HttpClient {
                 else {
                     // We have received an unauthorized response but have no handlers to handle it.
                     // Let the response return to the caller.
-                    return response;
+                    throw "Unauthorized Response.";
                 }
             }
             let redirectsRemaining = this._maxRedirects;
