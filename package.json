@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/carlsberg/jira-remote-link-action#readme",
   "dependencies": {
-    "@actions/core": "^1.4.0",
+    "@actions/core": "^1.9.1",
     "@actions/github": "^5.0.0",
     "node-fetch": "2.6.7"
   },
